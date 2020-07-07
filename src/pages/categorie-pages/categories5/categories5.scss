@@ -1,0 +1,40 @@
+page-categories5 {
+  .page-categories5 {
+    .list {
+      //margin-bottom: 25px;
+
+      .item.list-header {
+        background-color: darken(color($colors, light), 10%);
+        margin-bottom: 0;
+        border-bottom: 2px solid #Dddddd;
+        .label {
+          color: color($colors, dark);
+          font-size: 1.2em;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+    
+          ion-avatar {
+              margin-right: 10px;
+          }
+        
+      }
+      .item {
+        ion-avatar {
+          border-radius: 50%;
+          overflow: hidden;
+          display: block;
+          width: 40px;
+          height: 40px;
+          img {
+            overflow: hidden;
+            width: 40px;
+            height: auto;
+            border-radius: 0;
+          }
+        }
+        background-color: $white;
+      }
+    }
+  }
+}

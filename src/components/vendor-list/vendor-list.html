@@ -1,0 +1,32 @@
+<div *ngIf="config.showVendorInfo || config.showWcVendorInfo">
+  <div *ngIf="shared.vendors.length!=0 && shared.vendors[0]!=1" class="module">
+    <h3>
+      <ion-icon name="md-person"></ion-icon>{{'Featured Vendors'| translate}}
+    </h3>
+    <ion-slides slidesPerView=2.2 spaceBetween=10 class="animate-product"
+      dir="{{shared.dir}}">
+      <ion-slide *ngFor="let c of shared.vendors" (click)="openVendorPage(c)">
+        <ion-card *ngIf="c!=1">
+          <img src="{{c.banner}}" />
+          <ion-card-content>
+            <ion-card-title>
+              {{c.name}}
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+
+
+        <ion-card *ngIf="c==1">
+          <div class="ph-item" style="padding:0;">
+            <div class="ph-picture"></div>
+            <div class="ph-col-12">
+              <div class="ph-row" style="margin-bottom:0;">
+                <div class="ph-col-12 big"></div>
+              </div>
+            </div>
+          </div>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</div>

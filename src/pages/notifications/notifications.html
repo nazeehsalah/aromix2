@@ -1,0 +1,65 @@
+<!--
+  Generated template for the NotificationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      {{'Scratch Cards'| translate }}
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="refreshPage()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-grid class="page-empty" *ngIf="notifications.length==0 && httpRunning==false">
+    <ion-row align-items-center>
+      <ion-col col-12>
+        <h3 text-center>
+          <ion-icon name="notifications"></ion-icon>
+        </h3>
+        <h4 text-center>{{'Your Scratch Cards Coupon List is Empty'|translate}}</h4>
+        <h5 text-center>{{'continue shopping'|translate}}</h5>
+        <p text-center>
+          <button ion-button (click)="openShop()">{{'Explore'|translate}}</button>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <div *ngFor="let n of notifications">
+      <ion-item *ngIf="n.type=='1'">
+        <ion-icon name="notifications" item-start></ion-icon>
+        <!-- <h1 *ngIf="n.is_view == 0" (click)="openScratchCard(n.code)">{{'Scratch Me' |translate}}</h1> -->
+        <button *ngIf="n.is_view == 0" ion-button color="secondary" (click)="openScratchCard(n)">
+          {{'Open Scratch Card' |translate}}
+      </button>
+        <h2 *ngIf="n.is_view == 1">{{'Code'|translate}}: {{n.code}}</h2>
+        <h3 *ngIf="n.is_view == 1">{{n.message}}</h3>
+        <ion-note item-end class="note">{{'Expiry Date'|translate}} <small>{{n.expire_date}}</small></ion-note>
+        <!-- <ion-icon name="notifications" item-end></ion-icon> -->
+        <!-- <button ion-button clear item-end>View</button> -->
+      </ion-item>
+    </div>
+  </ion-list>
+
+
+  <ion-infinite-scroll #infinite (ionInfinite)="getNotifications($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{'Notifications'| translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="page-news-detail">
+  <ion-card *ngFor="let noti of notifications">
+    <ion-card-content>
+      <ion-card-title>
+        <h2>{{noti.payload.title}}</h2>
+      </ion-card-title>
+      <div class="post-description" [innerHTML]="noti.payload.body"></div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

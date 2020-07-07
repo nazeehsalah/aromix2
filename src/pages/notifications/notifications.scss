@@ -1,0 +1,23 @@
+page-notifications {
+  .note {
+    color: red;
+    width: 80px;
+    text-align: center;
+  }
+  ion-list {
+    h2 {
+      color: color($colors, primary);
+    }
+    ion-icon {
+      color: color($colors, secondary);
+    }
+  }
+  .pop {
+    width: 100%;
+    height: 100%;
+  }
+  .popover-md .popover-content {
+    width: 400px !important; 
+    height: 100px;
+  }
+}

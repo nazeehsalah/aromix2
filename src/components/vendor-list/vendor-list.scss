@@ -1,0 +1,44 @@
+vendor-list {
+  .module {
+    h3 {
+      margin-top: 5px;
+      padding-left: 0px !important;
+    }
+    ion-icon {
+      margin: 5px;
+    }
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+
+    .swiper-slide {
+      margin-bottom: 0px !important;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+    .slides .swiper-slide:first-child {
+      margin-left: 0px !important;
+    }
+  }
+  .slide-zoom {
+    width: 100%;
+  }
+  .card-md {
+    width: 100%;
+    margin: 0 !important;
+  }
+  ion-card-content {
+    padding: 0 !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    text-align: center;
+    ion-card-title {
+      padding-left: 5px;
+      font-size: 11px !important;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
