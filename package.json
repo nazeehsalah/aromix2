@@ -60,7 +60,6 @@
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-email-composer": "^0.8.15",
     "cordova-plugin-facebook4": "5.0.0",
-    "cordova-plugin-fcm-with-dependecy-updated": "^7.0.3",
     "cordova-plugin-geolocation": "^4.0.2",
     "cordova-plugin-inappbrowser": "^1.7.2",
     "cordova-plugin-local-notification": "0.9.0-beta.2",
@@ -153,8 +152,7 @@
         "SENDER_ID": "301051371319",
         "ANDROID_SUPPORT_V13_VERSION": "27.+",
         "FCM_VERSION": "17.0.+"
-      },
-      "cordova-plugin-fcm-with-dependecy-updated": {}
+      }
     },
     "platforms": [
       "android",
